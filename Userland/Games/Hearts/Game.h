@@ -30,12 +30,12 @@ public:
 
     Function<void(String const&)> on_status_change;
 
+    void show_score_card(bool game_over);
+
 private:
     Game();
 
     void reset();
-
-    void show_score_card(bool game_over);
 
     void dump_state() const;
 

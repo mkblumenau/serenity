@@ -101,6 +101,9 @@ ErrorOr<int> serenity_main(Main::Arguments arguments)
     view_menu->add_action(GUI::CommonActions::make_fullscreen_action([&](auto&) {
         window->set_fullscreen(!window->is_fullscreen());
     }));
+    view_menu->add_action(GUI::Action::create("&Show scorecard", [&](auto&) {
+        game.show_score_card(false);
+    }));
 
     auto help_menu = window->add_menu("&Help"_string);
     help_menu->add_action(GUI::CommonActions::make_command_palette_action(window));
